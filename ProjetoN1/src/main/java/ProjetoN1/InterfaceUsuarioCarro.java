@@ -6,11 +6,11 @@ import ProjetoN1.persistencia.CarroDAO;
 import java.util.List;
 import java.util.Scanner;
 
-public class InterfaceUsuario {
+public class InterfaceUsuarioCarro {
     CarroDAO dao;
     Scanner in;
 
-    public InterfaceUsuario(CarroDAO dao) {
+    public InterfaceUsuarioCarro(CarroDAO dao) {
         this.dao = dao;
         this.in = new Scanner(System.in);
     }
@@ -60,16 +60,14 @@ public class InterfaceUsuario {
         System.out.println("\n******************");
         System.out.println("*** Novo carro ***");
         System.out.println("******************");
-        System.out.print("\nInforme o ID do carro: ");
-        carro.setId(in.nextLong());
-        in.nextLine();
         System.out.print("Informe o MODELO do carro: ");
         carro.setModelo(in.nextLine());
         System.out.print("Informe o MARCA do carro: ");
         carro.setMarca(in.nextLine());
         System.out.print("Informe o ANO do carro: ");
         carro.setAno(in.nextInt());
-        System.out.print("Informe o CAREGORIA do carro: ");
+        in.nextLine();
+        System.out.print("Informe o CATEGORIA do carro: ");
         carro.setCategoria(in.nextLine());
         if (dao.create(carro)) {
             System.out.println("Carro adicionado ao banco de Dados");
