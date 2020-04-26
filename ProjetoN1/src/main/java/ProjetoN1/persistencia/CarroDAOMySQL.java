@@ -27,25 +27,22 @@ public class CarroDAOMySQL implements CarroDAO {
             stm.setInt(3, carro.getAno());
             stm.setString(4, carro.getCategoria());
             int registros = stm.executeUpdate();
-            return  registros > 0 ? true : false;
-        }
-        catch (final SQLException ex) {
+            return registros > 0 ? true : false;
+        } catch (final SQLException ex) {
             System.out.println("Falha de conexão com a base de dados!");
             ex.printStackTrace();
-        }
-        catch (final Exception ex) {
+        } catch (final Exception ex) {
             ex.printStackTrace();
-        }
-        finally {
+        } finally {
             try {
                 conexao.close();
-            }
-            catch (final Exception ex) {
+            } catch (final Exception ex) {
                 ex.printStackTrace();
             }
         }
         return false;
     }
+
     @Override
     public List<Carro> read() {
         Connection conexao = mysql.getConnection();
@@ -63,28 +60,25 @@ public class CarroDAOMySQL implements CarroDAO {
                 carros.add(carro);
             }
             return carros;
-        }
-        catch (final SQLException ex) {
+        } catch (final SQLException ex) {
             System.out.println("Falha de conexão com a base de dados!");
             ex.printStackTrace();
-        }
-        catch (final Exception ex) {
+        } catch (final Exception ex) {
             ex.printStackTrace();
-        }
-        finally {
+        } finally {
             try {
                 conexao.close();
-            }
-            catch (final Exception ex) {
+            } catch (final Exception ex) {
                 ex.printStackTrace();
             }
         }
         return carros;
     }
+
     @Override
     public boolean update(Carro carro) {
         Connection conexao = mysql.getConnection();
-        int registros=-1;
+        int registros = -1;
         try {
             PreparedStatement stm = conexao.prepareStatement(updateSQL);
             stm.setString(1, carro.getModelo());
@@ -93,24 +87,21 @@ public class CarroDAOMySQL implements CarroDAO {
             stm.setString(4, carro.getCategoria());
             stm.setLong(5, carro.getId());
             registros = stm.executeUpdate();
-        }
-        catch (final SQLException ex) {
+        } catch (final SQLException ex) {
             System.out.println("Falha de conexão com a base de dados!");
             ex.printStackTrace();
-        }
-        catch (final Exception ex) {
+        } catch (final Exception ex) {
             ex.printStackTrace();
-        }
-        finally {
+        } finally {
             try {
                 conexao.close();
-            }
-            catch (final Exception ex) {
+            } catch (final Exception ex) {
                 ex.printStackTrace();
             }
         }
-        return  registros > 0 ? true : false;
+        return registros > 0 ? true : false;
     }
+
     @Override
     public boolean delete(Carro carro) {
         Connection conexao = mysql.getConnection();
@@ -118,22 +109,19 @@ public class CarroDAOMySQL implements CarroDAO {
             PreparedStatement stm = conexao.prepareStatement(deleteSQL);
             stm.setLong(1, carro.getId());
             int registros = stm.executeUpdate();
-            return  registros > 0 ? true : false;
-        }
-        catch (final SQLException ex) {
+            return registros > 0 ? true : false;
+        } catch (final SQLException ex) {
             System.out.println("Falha de conexão com a base de dados!");
             ex.printStackTrace();
-        }
-        catch (final Exception ex) {
+        } catch (final Exception ex) {
             ex.printStackTrace();
-        }
-        finally {
+        } finally {
             try {
                 conexao.close();
-            }
-            catch (final Exception ex) {
+            } catch (final Exception ex) {
                 ex.printStackTrace();
             }
         }
         return false;
     }
+}
