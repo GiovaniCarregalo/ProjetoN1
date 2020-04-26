@@ -40,7 +40,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Downloads" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="SvnConfiguration">
@@ -73,6 +73,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="434" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1360.728@0.0.1360.728" timestamp="1587860950303" />
+    <state x="460" y="122" key="FileChooserDialogImpl" timestamp="1587864843036">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="460" y="122" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1587864843036" />
     <state width="1317" height="179" key="GridCell.Tab.0.bottom" timestamp="1587859554948">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -93,5 +97,9 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="183" y="9" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1587860545881" />
+    <state x="62" y="72" key="new project wizard" timestamp="1587865189606">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="62" y="72" key="new project wizard/0.0.1360.728@0.0.1360.728" timestamp="1587865189606" />
   </component>
 </project>
